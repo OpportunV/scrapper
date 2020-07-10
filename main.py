@@ -20,8 +20,6 @@ def get_html(url):
 
 def pick_links(html, n=3):
     soup = BeautifulSoup(html, 'lxml')
-    # [print(i) for i in soup.find_all('a', href=True)]
-    # print(soup.prettify())
     links = [i['href'] for i in soup.find_all('a', href=True)
              if i['href'].startswith('http') and 'google' not in i['href']]
     shuffle(links)
