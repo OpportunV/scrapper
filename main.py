@@ -93,8 +93,6 @@ def parse_links(links: List):
 def write_data(data):
     with open(f'{FILENAME}.json', 'w', encoding='utf8') as f_out:
         json.dump(data, f_out, indent=2, ensure_ascii=False)
-    
-    print(json.dumps(data, indent=2, ensure_ascii=False))
 
 
 def main():
